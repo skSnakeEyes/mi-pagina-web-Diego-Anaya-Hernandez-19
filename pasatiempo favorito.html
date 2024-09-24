@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" typr="IMAGENES/jpg" href="IMAGENES/pasatiempo.png">
+    <title>Pasatiempos</title>
+    <style>
+        body {
+          background: url(IMAGENES/botones.jpg)no-repeat;
+          background-size: cover;
+        }
+      </style>
+</head>
+<body>
+    <section class="botonr">
+        <a href="mi pagina web.html">✖️</a>
+      </section>
+      <section class="pasatiemposfv" style="text-align: center; font-family: Arial, sans-serif; color: white; font-size: 50px;">
+        <p style="font-size: 16px;">Mis pasatiempos favoritos son una fuente constante de alegría y relajación en mi vida. Me encanta tocar la guitarra; es una forma en la que puedo expresarme y escapar del estrés diario. La música también juega un papel importante en mi vida: escuchar mis canciones favoritas me ayuda a desconectar y disfrutar de momentos de paz.</p>
+        <p style="font-size: 16px;">Soy un gran aficionado a ver videos, ya sea para aprender algo nuevo o simplemente para entretenerme. Las películas y las series son otra de mis grandes pasiones; me encanta sumergirme en diferentes historias y universos, disfrutar de tramas emocionantes y descubrir nuevos actores y directores.</p>
+        <p style="font-size: 16px;">Los videojuegos son otra de mis pasiones; me fascina sumergirme en mundos virtuales y desafiarme a mí mismo con nuevos niveles y retos. Salir a echar relajo con amigos es una parte esencial de mi vida social, donde disfruto de buenos momentos y risas. Además, me gusta salir a pasear y explorar nuevos lugares, lo que me permite conectar con la naturaleza y descubrir rincones interesantes. También me entusiasma conocer nuevos lugares y culturas, lo cual enriquece mi perspectiva del mundo.</p>
+        <p style="font-size: 16px;">Aparte de todo esto, disfruto de actividades como cocinar nuevas recetas, practicar deportes y leer libros que amplían mis horizontes. Estos pasatiempos no solo me brindan diversión, sino que también me ayudan a crecer y a mantenerme equilibrado.</p>
+      </section>
+       
+      <section class="infopersonal2">
+        <style>
+          /* Estilos básicos para el slider */
+          .slider {
+              position: relative;
+              width: 100%;
+              max-width: 600px;
+              margin: auto;
+              overflow: hidden;
+          }
+  
+          .slides {
+              display: flex;
+              transition: transform 0.5s ease;
+          }
+  
+          .slide {
+              min-width: 100%;
+              box-sizing: border-box;
+          }
+  
+          .slide img {
+              width: 100%;
+              vertical-align: middle;
+          }
+  
+          /* Controles del slider */
+          .prev, .next {
+              cursor: pointer;
+              position: absolute;
+              top: 50%;
+              width: auto;
+              padding: 16px;
+              margin-top: -22px;
+              color: white;
+              font-weight: bold;
+              font-size: 18px;
+              transition: background-color 0.6s ease;
+              border-radius: 3px;
+              user-select: none;
+          }
+  
+          .prev {
+              left: 0;
+              background-color: rgba(0, 0, 0, 0.5);
+          }
+  
+          .next {
+              right: 0;
+              background-color: rgba(0, 0, 0, 0.5);
+          }
+      </style>
+  </head>
+  <body>
+      <div class="slider">
+          <div class="slides">
+              <div class="slide">
+                  <img src="IMAGENES/spotify.jpeg" alt="Slide 1">
+              </div>
+              <div class="slide">
+                  <img src="IMAGENES/guitarra.jpg" alt="Slide 2">
+              </div>
+              <div class="slide">
+                  <img src="IMAGENES/pelisnet.jpeg" alt="Slide 3">
+              </div>
+              <div class="slide">
+                <img src="IMAGENES/rondalla.jpg" alt="Slide 3">
+            </div>
+            <div class="slide">
+              <img src="IMAGENES/controlvideo.jpeg" alt="Slide 3">
+          </div>
+          <div class="slide">
+            <img src="IMAGENES/cocinaele.jpeg" alt="Slide 3">
+        </div>
+          </div>
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+  
+      <script>
+          let slideIndex = 0;
+  
+          function showSlides(n) {
+              let slides = document.querySelectorAll(".slide");
+              if (n >= slides.length) { slideIndex = 0 }
+              if (n < 0) { slideIndex = slides.length - 1 }
+              for (let i = 0; i < slides.length; i++) {
+                  slides[i].style.transform = `translateX(-${slideIndex * 100}%)`;
+              }
+          }
+  
+          function plusSlides(n) {
+              showSlides(slideIndex += n);
+          }
+  
+          showSlides(slideIndex);
+      </script>
+        
+    </section>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="icon" typr="IMAGENES/jpg" href="IMAGENES/perfil.png">
+    <title>Informacion Personal</title>
+    <style>
+        body {
+          background: url(IMAGENES/playa.jpg);
+          background-size: cover;
+        }
+      </style>
+  </head>
+  <section>
+    
+    <section class="botonr">
+      <a href="mi pagina web.html">✖️</a>
+    </section>
+    <section class="infopersonal">
+      <style>
+        /* Estilos básicos para el slider */
+        .slider {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .slide img {
+            width: 100%;
+            vertical-align: middle;
+        }
+
+        /* Controles del slider */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: background-color 0.6s ease;
+            border-radius: 3px;
+            user-select: none;
+        }
+
+        .prev {
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .next {
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <div class="slides">
+            <div class="slide">
+                <img src="IMAGENES/yo.jpg" alt="Slide 1">
+            </div>
+            <div class="slide">
+                <img src="IMAGENES/yo2.jpg" alt="Slide 2">
+            </div>
+            <div class="slide">
+                <img src="IMAGENES/yo3.jpg" alt="Slide 3">
+            </div>
+            <div class="slide">
+              <img src="IMAGENES/yo4.jpg" alt="Slide 3">
+          </div>
+          <div class="slide">
+            <img src="IMAGENES/yo5.jpg" alt="Slide 3">
+        </div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+
+        function showSlides(n) {
+            let slides = document.querySelectorAll(".slide");
+            if (n >= slides.length) { slideIndex = 0 }
+            if (n < 0) { slideIndex = slides.length - 1 }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.transform = `translateX(-${slideIndex * 100}%)`;
+            }
+        }
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        showSlides(slideIndex);
+    </script>
+      
+  </section>
+
+  <section class="informacion">
+    <h1 style="text-align: center; margin: 0 auto; width: fit-content; font-family: 'lumi', serif; font-size: 27px;">
+      Me llamo Diego Anaya Hernández, tengo 21 años, nací el 19 de noviembre del 2002, en el municipio de Tlanchinol Hgo, vivo en la comunidad de <a href="https://www.facebook.com/acayuca.molangohidalgo" target="_blank">Acayuca</a> perteneciente al municipio de <a href="https://www.google.com/search?gs_ssp=eJzj4tLP1TcwNc4qqco1YPQSyc3PScxLz1dISVVILU5OzM3MyUkEALpkC20&q=molango+de+escamilla&rlz=1C1GCEA_enMX1101MX1101&oq=molango+de+&gs_lcrp=EgZjaHJvbWUqBwgBEC4YgAQyBggAEEUYOTIHCAEQLhiABDIICAIQABgWGB4yCAgDEC4YFhgeMgoIBBAAGA8YFhgeMggIBRAAGBYYHjIGCAYQRRg8MgYIBxBFGDzSAQg2ODYxajFqNKgCALACAQ&sourceid=chrome&ie=UTF-8" target="_blank">Molango de Escamilla Hidalgo</a>, actualmente estoy en el Séptimo semestre de la Ingeniería en Sistemas Computacionales en el <a href="https://huejutla.tecnm.mx/" target="_blank">Instituto Tecnológico Nacional de México Campús Huejutla</a>.
+  </h1>
+  
+  
+  </section>  
+  </body>
+</html>

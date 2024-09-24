@@ -1,0 +1,473 @@
+/*Pagina Principal*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(IMAGENES/fondo.jpg) no-repeat;
+  background-size: cover;
+}
+
+.principal {
+  width: 500px;
+  background: rgba(0, 0, 0, 0.8);
+  margin: 0 auto;
+  margin-top: 500%; /* Aumenta este valor */
+  padding: 60px;
+  color: white;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.box-img {
+  border-radius: 50%;
+}
+
+.principal h1 {
+  font-size: 30px;
+  letter-spacing: 1px;
+  font-weight: 100;
+  margin: 30px 0 20px;
+}
+
+.principal h2 {
+  font-size: 30px;
+  letter-spacing: 1px;
+  font-weight: 100;
+  margin: 30px 0 20px;
+}
+
+.principal h3 {
+  font-size: 30px;
+  letter-spacing: 1px;
+  font-weight: 100;
+  margin: 30px 0 20px;
+}
+
+.principal {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.principal ul li {
+  display: inline-block;
+}
+
+.principal ul li a {
+  color: white;
+  font-size: 35px;
+  padding: 10px 5px;
+  display: block;
+  transition: all 0.5s ease-in-out;
+}
+
+.principal ul li a:hover {
+  color: #b9b9b9;
+  transform: scale(1.1);
+}
+
+/*Inicio Menu*/
+
+.header {
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+.container .btn-menu,
+.logo {
+  float: left;
+  line-height: 100px;
+}
+.container .btn-menu label {
+  color: #fff;
+  font-size: 25px;
+  cursor: pointer;
+}
+.logo h1 {
+  color: #fff;
+  font-weight: 400;
+  font-size: 22px;
+  margin-left: 10px;
+}
+.container .menu {
+  float: right;
+  line-height: 100px;
+}
+.container .menu a {
+  display: inline-block;
+  padding: 15px;
+  line-height: normal;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+  font-size: 15px;
+  margin-right: 5px;
+}
+.container .menu a:hover {
+  border-bottom: 2px solid #c7c7c7;
+  padding-bottom: 5px;
+}
+
+#btn-menu {
+  display: none;
+}
+.container-menu {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  transition: all 500ms ease;
+  opacity: 0;
+  visibility: hidden;
+}
+#btn-menu:checked ~ .container-menu {
+  opacity: 1;
+  visibility: visible;
+}
+.cont-menu {
+  width: 100%;
+  max-width: 250px;
+  background: #000000;
+  height: 100vh;
+  position: relative;
+  transition: all 500ms ease;
+  transform: translateX(-100%);
+}
+#btn-menu:checked ~ .container-menu .cont-menu {
+  transform: translateX(0%);
+}
+.cont-menu nav {
+  transform: translateY(15%);
+}
+.cont-menu nav a {
+  display: block;
+  text-decoration: none;
+  padding: 20px;
+  color: hwb(0 100% 0%);
+  border-left: 5px solid transparent;
+  transition: all 400ms ease;
+}
+.cont-menu nav a:hover {
+  border-left: 5px solid #c7c7c7;
+  background: #1f1f1f;
+}
+.cont-menu label {
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/*Inicio IP*/
+.infopersonal {
+  width: 400px;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 50px;
+  color: white;
+  text-align: center;
+  border-radius: 15px;
+
+  position: absolute;
+  top: 50%;
+  right: 70px; /* Agrega esta línea para la separación del margen derecho */
+  transform: translateY(-50%);
+}
+
+.infopersonal .boxifp {
+  border-radius: 100%;
+  animation: fadeInOut 3s infinite; /* Cambia 3s al tiempo que prefieras */
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.informacion {
+  width: 400px;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 50px;
+  color: white;
+  text-align: center;
+  border-radius: 15px;
+  position: absolute;
+  top: 50%;
+  left: 30%; /* Centramos horizontalmente */
+  transform: translate(-50%, -50%); /* Centramos verticalmente */
+}
+
+/*Pasatiempos Favoritos*/
+.infopersonal2 {
+  width: 220px;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  color: white;
+  text-align: center;
+  border-radius: 15px;
+  position: absolute;
+  top: 70%;
+  left: 50%; /* Centramos horizontalmente */
+  transform: translate(-50%, -50%); /* Centramos verticalmente */
+}
+
+/*musica*/
+.tablamusic2 {
+  color: #ffffff;
+}
+
+.tablamusic3 {
+  color: #ffffff;
+}
+
+/*enlaces*/
+a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  transition: color 0.3s ease; /* Añade una transición suave al cambio de color */
+}
+
+a:hover {
+  color: red;
+}
+
+
+/**/
+.pasatiemposfv {
+  font-size: 50px;
+}
+
+/*imagenes comida*/
+.image-container .circular-image {
+  width: 200px; /* Ajusta el tamaño de la imagen */
+  height: 200px; /* El mismo valor para el ancho y alto para que sea cuadrada */
+  border-radius: 50%; /* Hace que las esquinas sean redondeadas hasta formar un círculo */
+  object-fit: cover; /* Asegura que la imagen se ajuste bien dentro del contenedor circular */
+  border: 5px solid rgb(255, 0, 0); /* Borde inicial en rojo */
+  animation: rgb-border 2s infinite; /* Aplica la animación de cambio de color */
+}
+
+@keyframes rgb-border {
+  0% {
+    border-color: rgb(255, 0, 0); /* Rojo */
+  }
+  33% {
+    border-color: rgb(0, 255, 0); /* Verde */
+  }
+  66% {
+    border-color: rgb(0, 0, 255); /* Azul */
+  }
+  100% {
+    border-color: rgb(255, 0, 0); /* Vuelve a rojo */
+  }
+}
+
+.image-container .circular-image1 {
+  width: 200px; /* Ajusta el tamaño de la imagen */
+  height: 200px; /* El mismo valor para el ancho y alto para que sea cuadrada */
+  border-radius: 50%; /* Hace que las esquinas sean redondeadas hasta formar un círculo */
+  object-fit: cover; /* Asegura que la imagen se ajuste bien dentro del contenedor circular */
+  border: 5px solid rgb(255, 0, 0); /* Borde inicial en rojo */
+  animation: rgb-border 2s infinite; /* Aplica la animación de cambio de color */
+  display: flex; /* Usar flexbox para alinear contenido */
+    justify-content: flex-start; /* Alinear a la izquierda */
+    margin-left: 160px; /* Ajusta el valor según necesites */
+}
+
+@keyframes rgb-border {
+  0% {
+    border-color: rgb(255, 0, 0); /* Rojo */
+  }
+  33% {
+    border-color: rgb(0, 255, 0); /* Verde */
+  }
+  66% {
+    border-color: rgb(0, 0, 255); /* Azul */
+  }
+  100% {
+    border-color: rgb(255, 0, 0); /* Vuelve a rojo */
+  }
+}
+
+.image-container .circular-image2 {
+  width: 200px; /* Ajusta el tamaño de la imagen */
+  height: 200px; /* El mismo valor para el ancho y alto para que sea cuadrada */
+  border-radius: 50%; /* Hace que las esquinas sean redondeadas hasta formar un círculo */
+  object-fit: cover; /* Asegura que la imagen se ajuste bien dentro del contenedor circular */
+  border: 5px solid rgb(255, 0, 0); /* Borde inicial en rojo */
+  animation: rgb-border 2s infinite; /* Aplica la animación de cambio de color */
+  display: flex; /* Usar flexbox para alinear contenido */
+  justify-content: flex-start; /* Alinear a la izquierda */
+  margin-left: 300px; /* Ajusta el valor según necesites */
+  margin-top: -405px; /* Ajusta este valor según lo necesites */
+
+}
+
+@keyframes rgb-border {
+  0% {
+    border-color: rgb(255, 0, 0); /* Rojo */
+  }
+  33% {
+    border-color: rgb(0, 255, 0); /* Verde */
+  }
+  66% {
+    border-color: rgb(0, 0, 255); /* Azul */
+  }
+  100% {
+    border-color: rgb(255, 0, 0); /* Vuelve a rojo */
+  }
+}
+
+.image-container .circular-image3 {
+  width: 200px; /* Ajusta el tamaño de la imagen */
+  height: 200px; /* El mismo valor para el ancho y alto para que sea cuadrada */
+  border-radius: 50%; /* Hace que las esquinas sean redondeadas hasta formar un círculo */
+  object-fit: cover; /* Asegura que la imagen se ajuste bien dentro del contenedor circular */
+  border: 5px solid rgb(255, 0, 0); /* Borde inicial en rojo */
+  animation: rgb-border 2s infinite; /* Aplica la animación de cambio de color */
+  margin-left: 450px; /* Ajusta el valor según necesites */
+}
+
+@keyframes rgb-border {
+  0% {
+    border-color: rgb(255, 0, 0); /* Rojo */
+  }
+  33% {
+    border-color: rgb(0, 255, 0); /* Verde */
+  }
+  66% {
+    border-color: rgb(0, 0, 255); /* Azul */
+  }
+  100% {
+    border-color: rgb(255, 0, 0); /* Vuelve a rojo */
+  }
+}
+
+.image-container .circular-image4 {
+  width: 200px; /* Ajusta el tamaño de la imagen */
+  height: 200px; /* El mismo valor para el ancho y alto para que sea cuadrada */
+  border-radius: 50%; /* Hace que las esquinas sean redondeadas hasta formar un círculo */
+  object-fit: cover; /* Asegura que la imagen se ajuste bien dentro del contenedor circular */
+  border: 5px solid rgb(255, 0, 0); /* Borde inicial en rojo */
+  animation: rgb-border 2s infinite; /* Aplica la animación de cambio de color */
+  display: flex; /* Usar flexbox para alinear contenido */
+  justify-content: flex-start; /* Alinear a la izquierda */
+  margin-left: 600px; /* Ajusta el valor según necesites */
+  margin-top: -404px; /* Ajusta este valor según lo necesites */
+
+}
+
+@keyframes rgb-border {
+  0% {
+    border-color: rgb(255, 0, 0); /* Rojo */
+  }
+  33% {
+    border-color: rgb(0, 255, 0); /* Verde */
+  }
+  66% {
+    border-color: rgb(0, 0, 255); /* Azul */
+  }
+  100% {
+    border-color: rgb(255, 0, 0); /* Vuelve a rojo */
+  }
+}
+
+.image-container .circular-image5 {
+  width: 200px; /* Ajusta el tamaño de la imagen */
+  height: 200px; /* El mismo valor para el ancho y alto para que sea cuadrada */
+  border-radius: 50%; /* Hace que las esquinas sean redondeadas hasta formar un círculo */
+  object-fit: cover; /* Asegura que la imagen se ajuste bien dentro del contenedor circular */
+  border: 5px solid rgb(255, 0, 0); /* Borde inicial en rojo */
+  animation: rgb-border 2s infinite; /* Aplica la animación de cambio de color */
+  margin-left: 770px; /* Ajusta el valor según necesites */
+}
+
+@keyframes rgb-border {
+  0% {
+    border-color: rgb(255, 0, 0); /* Rojo */
+  }
+  33% {
+    border-color: rgb(0, 255, 0); /* Verde */
+  }
+  66% {
+    border-color: rgb(0, 0, 255); /* Azul */
+  }
+  100% {
+    border-color: rgb(255, 0, 0); /* Vuelve a rojo */
+  }
+}
+
+.image-container .circular-image6 {
+  width: 200px; /* Ajusta el tamaño de la imagen */
+  height: 200px; /* El mismo valor para el ancho y alto para que sea cuadrada */
+  border-radius: 50%; /* Hace que las esquinas sean redondeadas hasta formar un círculo */
+  object-fit: cover; /* Asegura que la imagen se ajuste bien dentro del contenedor circular */
+  border: 5px solid rgb(255, 0, 0); /* Borde inicial en rojo */
+  animation: rgb-border 2s infinite; /* Aplica la animación de cambio de color */
+  display: flex; /* Usar flexbox para alinear contenido */
+  justify-content: flex-start; /* Alinear a la izquierda */
+  margin-left: 940px; /* Ajusta el valor según necesites */
+  margin-top: -404px; /* Ajusta este valor según lo necesites */
+
+}
+
+@keyframes rgb-border {
+  0% {
+    border-color: rgb(255, 0, 0); /* Rojo */
+  }
+  33% {
+    border-color: rgb(0, 255, 0); /* Verde */
+  }
+  66% {
+    border-color: rgb(0, 0, 255); /* Azul */
+  }
+  100% {
+    border-color: rgb(255, 0, 0); /* Vuelve a rojo */
+  }
+}
+
+.image-container .circular-image7 {
+  width: 200px; /* Ajusta el tamaño de la imagen */
+  height: 200px; /* El mismo valor para el ancho y alto para que sea cuadrada */
+  border-radius: 50%; /* Hace que las esquinas sean redondeadas hasta formar un círculo */
+  object-fit: cover; /* Asegura que la imagen se ajuste bien dentro del contenedor circular */
+  border: 5px solid rgb(255, 0, 0); /* Borde inicial en rojo */
+  animation: rgb-border 2s infinite; /* Aplica la animación de cambio de color */
+  margin-left: 1140px; /* Ajusta el valor según necesites */
+}
+
+@keyframes rgb-border {
+  0% {
+    border-color: rgb(255, 0, 0); /* Rojo */
+  }
+  33% {
+    border-color: rgb(0, 255, 0); /* Verde */
+  }
+  66% {
+    border-color: rgb(0, 0, 255); /* Azul */
+  }
+  100% {
+    border-color: rgb(255, 0, 0); /* Vuelve a rojo */
+  }
+}
+
